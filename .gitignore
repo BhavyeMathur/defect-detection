@@ -1,6 +1,6 @@
 lightning_logs/*
 .ipynb_checkpoints/*
 
-test/*
-train/*
-val/*
+**/test/*
+**/train/*
+**/val/*
