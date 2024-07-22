@@ -1,7 +1,11 @@
-import torchvision
 import numpy as np
 from sklearn.model_selection import train_test_split
 
+from PIL import Image
+from torch.utils.data import Dataset
+from torchvision.transforms import v2 as transforms
+
+import os
 from .path import get_image_sources, directory_from_files
 
 
@@ -22,4 +26,26 @@ def get_img_dataset_normalisation(dataset):
     return mean, stdev
 
 
-__all__ = ["split_dataset", "get_img_dataset_normalisation"]
+class MaskedImageDataset(Dataset):
+    def __init__(self, folder: str, transform=None, select_channel: int | None =None):
+        self.image_paths = list(map(lambda path: os.path.join(folder, path), os.listdir(folder)))
+
+        self.transforms = transform
+        self.mask_transform = transforms.RandomErasing(p=1, scale=(0.3, 0.3))
+        self.select_channel = select_channel
+
+    def __len__(self):
+        return len(self.image_paths)
+
+    def __getitem__(self, index):
+        image = Image.open(self.image_paths[index])
+        image = self.transforms(image)
+
+        if self.select_channel:
+            image = image[self.select_channel]
+
+        t_image = self.mask_transform(image)
+        return t_image, image
+
+
+__all__ = ["split_dataset", "get_img_dataset_normalisation", "MaskedImageDataset"]
