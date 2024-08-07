@@ -4,3 +4,7 @@ lightning_logs/*
 **/test/*
 **/train/*
 **/val/*
+**/*.JPG
+**/*.PNG
+**/*.png
+
