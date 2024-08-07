@@ -7,4 +7,5 @@ lightning_logs/*
 **/*.JPG
 **/*.PNG
 **/*.png
+**/*.jpg
 
