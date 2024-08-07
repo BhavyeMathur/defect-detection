@@ -1,5 +1,10 @@
-Hello! This git repository contains code developed at [AIVolved](https://aivolved.in/) for quality testing using Machine Learning & Artificial Intelligence.
-A few of the important models for key datasets are outlined below.
+This repository contains code developed at [AIVolved](https://aivolved.in/) for quality testing using Machine Learning & Artificial Intelligence. 
+Several goals were pursued on key datasets including:
+
+1. Eye-patch shift detection using non-ML computer vision techniques (92.98% accuracy)
+2. Clustering & SVD on ResNet output for unsupervised defect detection in soap (99.55% acccuracy)
+3. Unsupervised, single-shot defect detection in soap using the Fourier Transform (100% accuracy)
+4. Cut detection in shampoo using Sobel & Canny filters + Hough Transform (N/A)
 
 # Eye-patch shift Dataset
 
