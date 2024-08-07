@@ -1,3 +1,6 @@
+Hello! This git repository contains code developed at [AIVolved](https://aivolved.in/) for quality testing using Machine Learning & Artificial Intelligence.
+A few of the important models for key datasets are outlined below.
+
 # Eye-patch shift Dataset
 
 [eyeshift.ipynb](eyeshift.ipynb) contains code that identifies defects in eye-patches for shampoo packets.
@@ -71,12 +74,38 @@ A non-defective single-shot reference image is chosen and the squared complex-di
 <td>Histogram of Differences to Reference</td>
 </tr>
   <tr>
-    <td> <img src="assets/soap-fourier-transform.png"  alt="1" width = 400px height = 150px ></td>
-    <td><img src="assets/soap-fourier-transform-histogram.png" alt="2" width = 220px height = 150px></td>
+    <td> <img src="assets/soap-fourier-transform.png"  alt="1" width = 450px height = 180px ></td>
+    <td><img src="assets/soap-fourier-transform-histogram.png" alt="2" width = 250px height = 180px></td>
    </tr>
 </table>
 
-
-# Soap Side Dataset
-
 # Shampoo Dataset
+
+[shampoo.ipynb](shampoo.ipynb) contains code that identifies defective cuts in shampoo packets. 
+First, vertical cuts are extracted using a YOLOv8 model, the cuts are equalised and normalised and a sobel filter is applied to enhance edges.
+A Canny edge-detector is used followed by a Hough transform to identify cuts.
+
+**Accuracy:** visually excellent. No quantitative measure.
+
+<table>
+<tr>
+<td>Masked Input</td>
+<td>Cuts Extracted from YOLOv8</td>
+</tr>
+  <tr>
+    <td> <img src="assets/shampoo-input.png"  alt="1" width = 360px height = 200px ></td>
+    <td><img src="assets/shampoo-cuts.png" alt="2" width = 360px height = 200px></td>
+   </tr>
+
+<tr>
+<td>Equalised & Sobel Filtered</td>
+<td>Canny Edge-detection & Hough Transform</td>
+</tr>
+  <tr>
+    <td> <img src="assets/shampoo-sobel.png"  alt="1" width = 360px height = 200px ></td>
+    <td><img src="assets/shampoo-hough.png" alt="2" width = 360px height = 200px></td>
+   </tr>
+</table>
+
+![img.png](assets/shampoo2.png)
+![img_1.png](assets/shampoo1.png)
