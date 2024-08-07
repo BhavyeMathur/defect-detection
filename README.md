@@ -25,8 +25,8 @@ fine-tuned on a dataset of soap to classify as either defective or non-defective
 <td>Defective</td>
 </tr>
   <tr>
-    <td> <img src="data/soap/non_defects/HT-GE232GC-T1-C-Snapshot-20240518-104031-936-621730587909.BMP"  alt="1" width = 360px height = 360px ></td>
-    <td><img src="data/soap/defects/HT-GE232GC-T1-C-Snapshot-20240525-110516-295-9220658954_BMP.rf.c60b80d2f6ef4dece9cc1480d213823f.jpg" alt="2" width = 360px height = 360px></td>
+    <td> <img src="assets/soap-non-defective.png"  alt="1" width = 360px height = 360px ></td>
+    <td><img src="assets/soap-defective.png" alt="2" width = 360px height = 360px></td>
    </tr>
 </table>
 
